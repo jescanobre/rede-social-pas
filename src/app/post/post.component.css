@@ -1,0 +1,12 @@
+.panel {
+    margin-top: 15px; 
+    border: 1px solid gray; 
+    border-radius: 10px; 
+    padding:6px;
+}
+.panel-heading {
+    font-size: 16px; 
+}
+.panel-body {
+    font-size: 12px; 
+}
