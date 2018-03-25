@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Post} from './../post-modelo/post-model';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-linha-do-tempo',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./linha-do-tempo.component.css']
 })
 export class LinhaDoTempoComponent implements OnInit {
+  @Input() posts: Post[];
 
   constructor() { }
 

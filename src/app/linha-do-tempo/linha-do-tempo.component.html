@@ -1,6 +1,12 @@
-<div class="row">
-  <div class="col-md-5 col-md-offset-2">
-    <app-post amigo="Daenerys Targaryen" post="Lannister, Baratheon, Stark, Tyrell... Todos eles são apenas raios de uma roda. Esse está em cima, depois aquele está em cima, e assim por diante ela gira, esmagando aqueles que estão no chão. Eu não vou parar a roda. Eu vou quebrar a roda."></app-post>
-    <app-post amigo="Arya Stark" post="Se deixar um lobo vivo, as ovelhas nunca estarão seguras."></app-post>
-  </div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{post.nome_pessoa}}
+    </div>
+    <div class="panel-body">
+        {{post.texto}}
+    </div>
+    <div class="panel-footer">
+        <span class="glyphicon glyphicon-star-empty"></span>
+        {{post.qtd_likes}}
+    </div>
 </div>

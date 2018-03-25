@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Post } from '../post-modelo/post-model';
 
 @Component({
   selector: 'app-post',
@@ -12,6 +13,6 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Input() amigo:string;
-  @Input() post:string;
+  @Input() post:Post;
+  
 }
