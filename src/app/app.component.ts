@@ -8,8 +8,6 @@ import { Post } from './post-modelo/post-model';
 })
 export class AppComponent {
   title = 'app';
-  posts = [
-    new Post(1, 'Arya', 'Texto aqui', 0)
-  ]
+
 
 }

@@ -7,11 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./linha-do-tempo.component.css']
 })
 export class LinhaDoTempoComponent implements OnInit {
-  @Input() posts: Post[];
+  @Input() posts: Post[] = [
+    new Post(1, "Arya", "Texto aqui", 0),
+    new Post(2, "Daenerys", "Texto aqui", 0)
+  ];
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  postRecebeuLike(post){
+    console.log(post);
+   }
 }

@@ -1,12 +1,3 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        {{post.nome_pessoa}}
-    </div>
-    <div class="panel-body">
-        {{post.texto}}
-    </div>
-    <div class="panel-footer">
-        <span class="glyphicon glyphicon-star-empty"></span>
-        {{post.qtd_likes}}
-    </div>
+<div  *ngFor="let post of posts">
+    <app-post [post] = "post" (recebeuLike) =  "postRecebeuLike($event)"></app-post>
 </div>

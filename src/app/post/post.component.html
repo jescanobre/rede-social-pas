@@ -1,0 +1,12 @@
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        {{post.nome_pessoa}}
+    </div>
+    <div class="panel-body">
+        {{post.texto}}
+    </div>
+    <div class="panel-footer" style="text-align: rigth">
+        <button (click)="curtir($event);" class= "like glyphicon glyphicon-star-empty btn btn-primary"> {{post.qtd_likes}} </button>
+        
+    </div>
+</div>
