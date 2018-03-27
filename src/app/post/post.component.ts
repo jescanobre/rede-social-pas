@@ -17,7 +17,6 @@ export class PostsComponent implements OnInit {
   }
 
   @Output() recebeuLike = new EventEmitter();
-
   
   curtir() {
     event.preventDefault();
