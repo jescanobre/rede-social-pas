@@ -1,4 +1,5 @@
 import { Post } from '../post-modelo/post-model';
+import { PostService } from './../services/post.service';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 
@@ -11,19 +12,24 @@ export class PostsComponent implements OnInit {
 
   @Input() post: Post;
 
-  constructor() { }
+  @Output() recebeuLike = new EventEmitter();
+
+  constructor(private postService: PostService) { }
 
   ngOnInit() {
   }
 
-  @Output() recebeuLike = new EventEmitter();
-  
-  curtir() {
-    event.preventDefault();
-    this.post.qtd_likes++;
-    console.log("clicou");
-    this.recebeuLike.emit(this.post);
+  like() {
+    // event.preventDefault();
+    this.postService.addLike(this.post);
+
+    // this.post.qtd_likes++;
+    // console.log("clicou");
+    // this.recebeuLike.emit(this.post);
   }
 
+  excluir(){
+    this.postService.excluirPost(this.post.id);
+  }
   
 }

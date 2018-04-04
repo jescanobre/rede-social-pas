@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse justify-content-between">
+<nav class="navbar navbar-default justify-content-between">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -13,17 +13,23 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="">
-          <button type="button" class="btn btn-default navbar-btn" type="button" style="margin: 5px;">Linha do tempo</button>
+        <li routerLinkActive="active">
+          <a routerLink="/linhadotempo">
+            Linha do tempo
+          </a>
+          <!-- <button type="button" class="btn btn-default navbar-btn" type="button" style="margin: 5px;">Linha do tempo</button> -->
         </li>
-        <li>
-          <button type="button" class="btn btn-default navbar-btn" type="button" style="margin: 5px;">Perfil</button>
+        <li routerLinkActive="active">
+          <a routerLink="/postinput">
+          Postar
+          </a>
+          <!-- <button type="button" class="btn btn-default navbar-btn" type="button" style="margin: 5px;" routerLink>Perfil</button> -->
         </li>
       </ul>
 
-      <ul class="nav navbar-nav navbar-">
+      <ul class="nav navbar-nav navbar-right">
         <li>
           <a href="#">Usuário</a>
         </li>

@@ -1,12 +1,25 @@
 <div class="panel panel-default" >
     <div class="panel-heading">
-        {{post.nome_pessoa}}
+        <span 
+            style="font-size: 18px;">
+            {{post.nome_pessoa}}
+        </span>
+        <span 
+          class="glyphicon glyphicon-remove" 
+          aria-hidden="true"
+          style="cursor:pointer; float:right; text-align: center; "
+          (click)="excluir()">
+          </span>
     </div>
+
     <div class="panel-body">
         {{post.texto}}
     </div>
-    <div class="panel-footer" style="text-align: rigth">
-        <button (click)="curtir($event);" class= "like glyphicon glyphicon-star-empty btn btn-primary"> {{post.qtd_likes}} </button>
-        
+
+    <div class="panel-footer ">
+        <button (click)="like($event);" 
+            class= "glyphicon glyphicon-thumbs-up btn btn-default"> 
+            {{post.qtd_likes}} 
+        </button>   
     </div>
 </div>
