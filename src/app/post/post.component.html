@@ -5,11 +5,17 @@
             {{post.nome_pessoa}}
         </span>
         <span 
-          class="glyphicon glyphicon-remove" 
-          aria-hidden="true"
-          style="cursor:pointer; float:right; text-align: center; "
-          (click)="excluir()">
-          </span>
+            class="glyphicon glyphicon-remove" 
+            aria-hidden="true"
+            style="cursor:pointer; float:right; text-align: center; "
+            (click)="excluir()">
+        </span>
+        <span
+            class="glyphicon glyphicon-pencil"
+            aria-hidden="true"
+            style="cursor:pointer; float:right; text-align: center; "
+            (click)="editar()">
+        </span>
     </div>
 
     <div class="panel-body">

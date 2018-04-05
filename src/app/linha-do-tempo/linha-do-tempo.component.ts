@@ -9,19 +9,42 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./linha-do-tempo.component.css']
 })
 export class LinhaDoTempoComponent implements OnInit {
-  // @Input() posts: Post[] = [
-  //   new Post(1, "Arya", "Texto aqui", 0),
-  //   new Post(2, "Daenerys", "Texto aqui", 0)
-  // ];
   posts: Post [];
 
   constructor(private postService: PostService) { }
 
-  ngOnInit() {
-    this.posts = this.postService.getPosts(); 
-    //por que isso?
+  fill(){
+    this.postService.getPosts()
+      .subscribe((data) => {
+        this.posts = data;
+      },
+        (error) => console.log(error));
   }
 
+  ngOnInit() {
+    //this.posts = this.postService.getPosts(); 
+    //por que isso?
+    this.fill();
+  }
+
+  addPost(post: Post){
+    this.postService.addPost(post)
+      .subscribe((data)=> { //o que é o data mesmo?
+        console.log(data);
+        this.fill();
+      },
+        (error) => console.log(error));
+  }
+
+  excluirPost(post: Post){ //essa parte do post:Post é pra dizer que post é um objeto do tipo Post?
+    this.postService.excluirPost(post)
+      .subscribe((data) => {
+        console.log(data);
+        this.fill();
+      },
+        (error) => console.log(error));
+  }
+  
   // postRecebeuLike(post){
   //   console.log(post);
   //  }
